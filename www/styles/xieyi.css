@@ -1,0 +1,34 @@
+.rule{
+    margin-top: 5rem;
+}
+p{
+    font-size: 1.5rem;
+}
+.rule>ol{
+    width: 20%;
+    position: fixed;
+    left: 0;
+}
+.rule>ol>li{
+    margin-bottom: 1.5rem;
+}
+li>a{
+    text-decoration: none;
+    color: black;
+}
+.rule>div{
+    margin-left: 18%;
+    padding-right: 4rem;
+    margin-top: 5rem;
+}
+.rule>div>div{
+    margin-bottom: 5rem;
+}
+h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+}

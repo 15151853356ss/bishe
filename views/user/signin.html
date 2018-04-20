@@ -1,7 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {{if title}}{{title}} - {{/if}} 问答网站
+    </title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/signin.css">
+</head>
 
-{{include '../shared/modal'}}
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/scripts/user/signin.js"></script>
-{{include '../shared/footer'}}
+<body>
+    <div class="sign">
+        <!-- logo -->
+        <div class="logo">
+            <a href="/">
+                <img src="/images/logo.png" alt="">
+            </a>
+        </div>
+        <!-- 主体部分 -->
+        <div class="main">
+            <!-- title -->
+            <div class="title">
+                <h4>
+                    <a href="/user/signin" class="active">登录</a>
+                    <b>.</b>
+                    <a href="/user/register">注册</a>
+                </h4>
+            </div>
+            <!-- form表单 -->
+            <div class="js-form">
+                <form action="">
+                    <div class="input-prepend">
+                        <input type="text" placeholder="请输入用户名" name="petname" required>
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="input-prepend input-password">
+                        <input type="text" placeholder="请输入密码" name="password" required>
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox">
+                        <span>记住我</span>
+                    </div>
+                    <nuxt-link class="help" to="/">
+                        登录遇到问题？
+                    </nuxt-link>
+                    <button type="submit" class="sign-in-btn">登录</button>
+                </form>
+            </div>
+            <!-- 第三方登录 -->
+            <div class="more-sign">
+                <p>社交账号登录</p>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-weixin weixin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-weibo weibo"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-qq qq"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {{include '../shared/modal'}}
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/scripts/user/signin.js"></script> {{include '../shared/footer'}}
