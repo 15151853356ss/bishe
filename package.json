@@ -1,0 +1,19 @@
+{
+  "name": "bishe",
+  "version": "1.0.0",
+  "description": "问答网站",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "杨珊珊",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.15",
+    "multer": "^1.3.0"
+  }
+}
