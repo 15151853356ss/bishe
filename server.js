@@ -17,7 +17,7 @@ app.use(require('./routes/index'));
 app.use(require('./routes/user/signin'));
 app.use(require('./routes/user/register'));
 app.use(require('./routes/user/personal'));
-app.use(require('./routes/user/photo'));
+app.use(require('./routes/user/settings'));
 
 
 app.use(require('./routes/ask'))

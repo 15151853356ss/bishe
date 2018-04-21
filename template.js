@@ -1,4 +1,6 @@
 const template = require('art-template');
+// 上线时去掉这行代码
+template.config('cache', false)
 
 template.helper('ms',function (t) {
     t = new Date(t);

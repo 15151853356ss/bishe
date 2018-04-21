@@ -1,0 +1,143 @@
+<div>
+    <nav class="navbar navbar-fixed-top">
+        <div class="width-limit">
+            <!-- logo -->
+            <a href="/" class="logo">
+                <img src="/images/nav-logo.png" alt="">
+            </a>
+            <!-- 右上角提问 -->
+            <a href="/ask" class="write-btn">提问</a>
+            <!-- 登录用户信息 -->
+            {{if user}}
+            <div class="user">
+                <div class="drop-down">
+                    <a href="/user/personal" class="avatar">
+                        <img src="/images/default-avatar.jpg" alt="/images/default-avatar.jpg">
+                    </a>
+                </div>
+                <ul class="drop-menu">
+                    <li>
+                        <a href="/">
+                            <i class="fa fa-home"></i>
+                            我的主页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/user/123/like">
+                            <i class="fa fa-heart"></i>
+                            喜欢的文章
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/bookmarks">
+                            <i class="fa fa-bookmark"></i>
+                            收藏的问题
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/user/settings">
+                            <i class="fa fa-cog"></i>
+                            设置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/user/signout">
+                            <i class="fa fa-sign-out"></i>
+                            退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 导航部分 -->
+            <div class="container">
+                <div class="nav-header">
+                    <button>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="/" class="active">
+                            <i class="fa fa-compass"></i>
+                            <span>发现</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/follow">
+                            <i class="fa fa-book"></i>
+                            <span>关注</span>
+                        </a>
+                    </li>
+                    <li class="user">
+                        <a href="/notify">
+                            <i class="fa fa-bell-o"></i>
+                            <span>消息</span>
+                        </a>
+                        <ul class="drop-menu">
+                            <li>
+                                <a href="/comments">
+                                    <i class="fa fa-comment-o"></i>
+                                    评论
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/envelope">
+                                    <i class="fa fa-envelope-o"></i>
+                                    简讯
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/focus">
+                                    <i class="fa fa-plus-square-o"></i>
+                                    关注
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/user/123/like">
+                                    <i class="fa fa-heart-o"></i>
+                                    喜欢和赞
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="search">
+                        <form action="/search" method="post">
+                            <input type="text" placeholder="搜索" class="search-input">
+                            <a href="#" class="search-btn">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            {{else}}
+            <!-- 右上角，登录注册 -->
+            <a href="/user/signin" class="btn log-in">登录</a>
+            <a href="/user/register" class="btn sign-up">注册</a>
+            <div class="container">
+                <div class="nav-header">
+                    <button>
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="/" class="active">
+                            <i class="fa fa-compass"></i>
+                            <span>发现</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="active">
+                            <i class="fa fa-download"></i>
+                            <span>下载APP</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            {{/if}}
+
+        </div>
+</div>
+</nav>
+</div>
