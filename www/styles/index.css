@@ -1,0 +1,74 @@
+.index {
+    margin-top: 30px;
+}
+.index .main{
+    padding-top: 30px; 
+    padding-right: 0;
+}
+.index .aside{
+    padding-top: 30px;
+}
+.Card{
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(26, 26, 26, .1);
+    box-sizing: border-box;
+}
+.index .main .Card .TopStoryHeader{
+    display: flex;
+    justify-content: space-between;
+    line-height: 58px;
+    padding: 0 20px;
+}
+.index .main .Card .TopStoryHeader .TopStoryHeader-navItem{
+    margin-left: 40px;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+.index .aside .GlobalSideBar-categoryList{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 -5px;
+    padding: 0 10px;
+}
+.index .aside .GlobalSideBar-categoryList .GlobalSideBar-categoryItem{
+    width: 33%;
+    display: flex;
+    margin-bottom: 25px;
+}
+.index .aside .GlobalSideBar-categoryList .Button--plain{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 0;
+    line-height: inherit;
+    background-color: transparent;
+}
+.index .aside .GlobalSideBar-categoryList .GlobalSideBar-categoryIcon{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.bolt:hover , .fa-bolt{
+    color: rgb(255, 207, 0);
+}
+.open:hover , .fa-folder-open{
+    color: rgb(67, 212, 128);
+}
+.cog:hover , .fa-cog{
+    color: rgb(0, 132, 255);
+}
+.pencil:hover , .fa-pencil{
+    color: rgb(15, 136, 235);
+}
+.cny:hover , .fa-cny{
+    color: rgb(84, 120, 240);
+}
