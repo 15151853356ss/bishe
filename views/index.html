@@ -50,7 +50,28 @@
                     </div>
                     <!-- 问题列表 -->
                     <div class="list-container">
-
+                        {{each questions as q}}
+                        <div class="note-list Card media">
+                            <div class="topic">
+                                <p>
+                                    <span>来自话题：</span>
+                                    <a href="/topic/{{q.topic}}">{{q.topic}}</a>
+                                </p>
+                            </div>
+                            <div class="media-left">
+                                <a>
+                                    <img class="media-object" src="/uploads/{{q.petname}}.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">{{q.petname}}</h5>
+                                {{q.content}}
+                                <div class="media-footing">
+                                    {{q.time | formatTime}}
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
                     </div>
                     <a href="#" class="load-more">阅读更多</a>
                 </div>
@@ -96,4 +117,5 @@
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> {{include 'shared/footer'}}
+    <script src="js/bootstrap.min.js"></script> 
+    {{include 'shared/footer'}}
