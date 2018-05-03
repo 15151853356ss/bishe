@@ -6,7 +6,8 @@ const router = exp.Router();
 
 router.get('/ask',util.sign,(req,res)=>{
     res.render('ask',{
-        title:'提问'
+        title:'提问',
+        user:req.cookies.petname
     })
 })
 

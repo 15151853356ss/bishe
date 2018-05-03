@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,30 @@
     <link rel="stylesheet" href="/styles/all.css">
     <link rel="stylesheet" href="/styles/ask.css">
 </head>
-<body>
-{{include 'shared/navbar'}}
 
-{{include 'shared/modal'}}
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/scripts/ask.js"></script>
-{{include 'shared/footer'}}
+<body>
+    {{include 'shared/navbar'}}
+    <div class="container index">
+        <h1>写下你的问题</h1>
+        <p>描述精确的问题更易得到解答</p>
+        <form>
+            <textarea name="content" cols="30" rows="3" class="form-control" placeholder="问题标题"></textarea>
+            <br>
+            <div class="search-box">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" aria-describedby="search" name="topic" placeholder="添加话题">
+                    <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div>
+                <p>问题描述(可选)：</p>
+                <textarea name="description" cols="30" rows="3" class="form-control" placeholder="问题背景、条件等详细信息"></textarea>
+            </div>
+            <br>
+            <input type="submit" value="提交问题" class="btn form-control">
+        </form>
+    </div>
+    {{include 'shared/modal'}}
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/scripts/ask.js"></script> {{include 'shared/footer'}}

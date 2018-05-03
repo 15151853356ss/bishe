@@ -51,7 +51,7 @@
                     <!-- 问题列表 -->
                     <div class="list-container">
                         {{each questions as q}}
-                        <div class="note-list Card media">
+                        <div class="note-list Card media" onclick="location.href='/answer/{{q.id}}'">
                             <div class="feedSource">
                                 <div class="topic">
                                     <p>
@@ -72,7 +72,7 @@
                                 <div class="contentItem">
                                     <h2>{{q.content}}</h2>
                                 </div>
-                                <div class="comment">
+                                <div class="comment-description">
                                     <div class="description">
                                         {{q.description}}
                                         <button>阅读全文</button>
@@ -82,15 +82,17 @@
                                             <i class="fa fa-heart"></i>
                                             喜欢
                                         </a>
-                                        <a href="#">
-                                            <i class="fa fa-comment-o"></i>
+                                        <a href="#" onclick="location.href='/answer/{{q.id}}'">
+                                            <i class="fa fa-commenting-o"></i>
                                             33条评论
                                         </a>
                                         <a href="#">
                                             <i class="fa fa-star"></i>
                                             收藏
                                         </a>
-                                        <a href="#" class="chajian">...</a>
+                                        <a href="#" class="chajian">
+                                            <i class="fa fa-ellipsis-h"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -140,5 +142,6 @@
             </div>
         </div>
     </div>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script> {{include 'shared/footer'}}
