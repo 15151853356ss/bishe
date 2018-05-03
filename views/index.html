@@ -52,22 +52,46 @@
                     <div class="list-container">
                         {{each questions as q}}
                         <div class="note-list Card media">
-                            <div class="topic">
-                                <p>
-                                    <span>来自话题：</span>
-                                    <a href="/topic/{{q.topic}}">{{q.topic}}</a>
-                                </p>
+                            <div class="feedSource">
+                                <div class="topic">
+                                    <p>
+                                        <span>来自话题：</span>
+                                        <a href="/topic/{{q.topic}}">{{q.topic}}</a>
+                                    </p>
+                                </div>
+                                <div class="media-left">
+                                    <a href="/{{q.petname}}/personal" class="avatar">
+                                        <img class="media-object" src="/uploads/{{q.petname}}.jpg" alt="">
+                                    </a>
+                                    <a href="/{{q.petname}}/personal" class="name">
+                                        <h5 class="media-heading">{{q.petname}}</h5>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="media-left">
-                                <a>
-                                    <img class="media-object" src="/uploads/{{q.petname}}.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h5 class="media-heading">{{q.petname}}</h5>
-                                {{q.content}}
-                                <div class="media-footing">
-                                    {{q.time | formatTime}}
+                            <div class="content">
+                                <div class="contentItem">
+                                    <h2>{{q.content}}</h2>
+                                </div>
+                                <div class="comment">
+                                    <div class="description">
+                                        {{q.description}}
+                                        <button>阅读全文</button>
+                                    </div>
+                                    <div class="comment-count">
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                            喜欢
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-comment-o"></i>
+                                            33条评论
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-star"></i>
+                                            收藏
+                                        </a>
+                                        <a href="#" class="chajian">...</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -117,5 +141,4 @@
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
-    {{include 'shared/footer'}}
+    <script src="js/bootstrap.min.js"></script> {{include 'shared/footer'}}
