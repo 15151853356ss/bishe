@@ -7,7 +7,7 @@ const router = exp.Router();
 router.get('/user/personal',util.sign,(req,res)=>{
     res.render('user/personal',{
         title:'个人中心',
-        petname:req.cookies.petname
+        user:req.cookies.petname
     })
 });
 

@@ -9,7 +9,7 @@ router.get('/user/settings',util.sign,(req,res)=>{
     db.User.find({petname:req.cookies.petname},(err,data)=>{
         res.render('user/settings',{
             title:'个人资料',
-            petname:req.cookies.petname,
+            user:req.cookies.petname,
             email:data[0].email,
             isMale:data[0].isMale
         })
@@ -19,7 +19,7 @@ router.get('/user/settings',util.sign,(req,res)=>{
 
 router.post('/api/user/photo',util.sign,uploads.single('photo'),(req,res)=>{
     res.render('user/settings',{
-        petname:req.cookies.petname
+        user:req.cookies.petname
     })
 })
 
