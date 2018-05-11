@@ -13,15 +13,13 @@ app.set('view engine','html');
 
 // 使用routes
 app.use(require('./routes/index'));
+app.use(require('./routes/ask'));
+app.use(require('./routes/detail'));
 
 app.use(require('./routes/user/signin'));
 app.use(require('./routes/user/register'));
 app.use(require('./routes/user/personal'));
 app.use(require('./routes/user/settings'));
-
-
-app.use(require('./routes/ask'))
-
 
 app.listen(4000,()=>{
     console.log('4000===');

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {{if title}}{{title}} - {{/if}} 问答网站
+    </title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/styles/all.css">
+    <link rel="stylesheet" href="/styles/detail.css">
+</head>
+
+<body>
+    {{include 'shared/navbar'}}
+    <div class="note">
+        <div class="post">
+            <!-- 文章正文 -->
+            <div class="article">
+                <h1 class="title">{{questions.content}}</h1>
+                <div class="author">
+                    <div class="avatar" onclick="location.href='/personal/{{questions.petname}}'">
+                        <img src="/uploads/{{questions.petname}}.jpg" alt="" class="media-object">
+                    </div>
+                    <div class="info">
+                        <a href="/personal/{{questions.petname}}" class="name" to="name">
+                            {{questions.petname}}
+                        </a>
+                        <a href="#" class="btn btn-follow">
+                            <i class="fa fa-plus"></i>
+                            <span>关注</span>
+                        </a>
+                        <div class="meta">
+                            <span class="publish-time">
+                                2018.03.28 06:56*
+                            </span>
+                            <span class="wordage">
+                                字数 1893
+                            </span>
+                            <span class="view-count">
+                                阅读 6741
+                            </span>
+                            <span class="comment-count">
+                                评论 123
+                            </span>
+                            <span class="like-count">
+                                喜欢 331
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-content">
+                    <p>{{questions.description}}</p>
+                </div>
+                <div class="answer">
+                    <form action="" class="answer-form">
+                        <div class="answer-input">
+                            <input type="hidden" name="id" value="{{questions.id}}">
+                            <textarea name="content" rows="3" placeholder="写回答..."></textarea>
+                        </div>
+                        <input type="submit" value="提交回答">
+                    </form>
+                </div>
+                <div class="answer-list">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{include 'shared/modal'}}
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/scripts/detail.js"></script> {{include 'shared/footer'}}

@@ -51,7 +51,7 @@
                     <!-- 问题列表 -->
                     <div class="list-container">
                         {{each questions as q}}
-                        <div class="note-list Card media" onclick="location.href='/answer/{{q.id}}'">
+                        <div class="note-list Card media" onclick="location.href='/detail/{{q.id}}'">
                             <div class="feedSource">
                                 <div class="topic">
                                     <p>
@@ -60,10 +60,10 @@
                                     </p>
                                 </div>
                                 <div class="media-left">
-                                    <a href="/{{q.petname}}/personal" class="avatar">
+                                    <a href="/personal/{{q.petname}}" class="avatar">
                                         <img class="media-object" src="/uploads/{{q.petname}}.jpg" alt="">
                                     </a>
-                                    <a href="/{{q.petname}}/personal" class="name">
+                                    <a href="/personal/{{q.petname}}" class="name">
                                         <h5 class="media-heading">{{q.petname}}</h5>
                                     </a>
                                 </div>
@@ -74,15 +74,14 @@
                                 </div>
                                 <div class="comment-description">
                                     <div class="description">
-                                        {{q.description}}
-                                        <button>阅读全文</button> 
+                                        {{q.description}} 
                                     </div>
                                     <div class="comment-count">
                                         <a href="#">
                                             <i class="fa fa-heart"></i>
                                             喜欢
                                         </a>
-                                        <a href="#" onclick="location.href='/answer/{{q.id}}'">
+                                        <a href="#" onclick="location.href='/detail/{{q.id}}'">
                                             <i class="fa fa-commenting-o"></i>
                                             33条评论
                                         </a>

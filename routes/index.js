@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
             if (err) {
                 // 
             } else {
-                console.log(data);
+                // console.log(data);
                 var questions = [];
                 res.render('index', {
                     user: req.cookies.petname,
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
                         m = m.toObject();
                         m.id = m._id.toString();
                         delete m._id;
-                        console.log(m)
+                        // console.log(m)
                         return m;
                     })
                 })
