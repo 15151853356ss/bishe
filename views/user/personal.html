@@ -18,29 +18,32 @@
     {{include '../shared/navbar'}}
 
     <div class="container">
-        <div class="header">
-            <div class="left">
-                <div>
-                    <img src="/uploads/{{petname}}.jpg" alt="">
+        <div class="personal">
+            <div class="header">
+                <div class="left">
+                    <div>
+                        <img src="/uploads/{{petname}}.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>{{user}}</p>
+                        <p>暂无个人资料</p>
+                    </div>
                 </div>
-                <div>
-                    <p>{{petname}}</p>
-                    <p>暂无个人资料</p>
+                <div class="right">
+                    <a href="/user/photo">完善个人资料</a>
                 </div>
             </div>
-            <div class="right">
-                <a href="/user/photo">完善个人资料</a>
+            <div class="down">
+                <nav class="wode">
+                    <li>问题</li>
+                    <li>回答</li>
+                </nav>
             </div>
-        </div>
-        <div class="down">
-            <nav class="wode">
-                <li>问题</li>
-                <li>回答</li>
-            </nav>
         </div>
     </div>
 
     {{include '../shared/modal'}}
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/scripts/user/personal.js"></script> {{include '../shared/footer'}}
+    <script src="/scripts/user/personal.js"></script> 
+    {{include '../shared/footer'}}

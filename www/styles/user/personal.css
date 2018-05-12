@@ -1,0 +1,26 @@
+.personal{
+    margin-top: 76px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid lightgray;
+    background-color: #fff;
+}
+.left{
+    display: flex;
+    justify-content: flex-start;
+}
+.left>div:nth-of-type(2){
+    padding: 2rem;
+}
+.right{
+    padding: 2rem;
+}
+.wode{
+    display: flex;
+}
+.wode>li:nth-of-type(2){
+    margin-left: 3rem;
+}

@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
                         return m;
                     })
                 })
-                console.log(questions)
+                // console.log(questions)
             }
         })
 })

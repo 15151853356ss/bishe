@@ -11,15 +11,23 @@
 .note .post .article{
     padding-top: 16px;
 }
+.note .post .article div{
+    background: #fff;
+}
 .note .post .article .title{
     font-size: 34px;
     font-weight: 700;
     margin-top: 20px;
     word-break: break-word;
     line-height: 1.3;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    padding: 10px;
+    background: #fff;
 }
 .note .post .article .author{
-    margin: 30px 0;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    padding: 10px;
 }
 .note .post .article .avatar{
     width: 48px;
@@ -70,13 +78,53 @@
     font-weight: 400;
     line-height: 1.7;
     color: #2f2f2f;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    padding: 10px;
 }
 .note .post .article .show-content p{
     margin-bottom: 25px;
+}
+.note .post .article .answer{
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    padding: 10px;
+    margin: 20px 0;
+    background: #fff;
 }
 .note .post .article .answer form{
     width: 100%;
 }
 .note .post .article .answer form textarea{
     width: 100%;
+}
+.note-list{
+    padding: 16px 20px;
+}
+.feedSource{
+    margin-bottom: 8px;
+}
+.media-left {
+    width: 100%;
+    margin-bottom: 14px;
+    display: block;
+}
+.media-left a{
+    display: inline-block;
+    vertical-align: middle;
+}
+.media-left .avatar img{
+    width: 24px;
+    height: 24px;
+}
+.media-left .name{
+    font-size: 15px;
+    font-weight: 600;
+}
+.comment-description .description{
+    margin:9px 0; 
+}
+.comment-count a{
+    margin-right: 24px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #8590a6;
 }

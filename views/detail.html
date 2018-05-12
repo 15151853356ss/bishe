@@ -65,7 +65,44 @@
                     </form>
                 </div>
                 <div class="answer-list">
-
+                    {{each answers as answer}}
+                    <div class="note-list Card media">
+                        <div class="feedSource">
+                            <div class="media-left">
+                                <a href="/personal/{{answer.petname}}" class="avatar">
+                                    <img class="media-object" src="/uploads/{{answer.petname}}.jpg" alt="">
+                                </a>
+                                <a href="/personal/{{answer.petname}}" class="name">
+                                    <h5 class="media-heading">{{answer.petname}}</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="comment-description">
+                                <div class="description">
+                                    {{answer.content}}
+                                </div>
+                                <div class="comment-count">
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                        喜欢
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-commenting-o"></i>
+                                        33条评论
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-star"></i>
+                                        收藏
+                                    </a>
+                                    <a href="#" class="chajian">
+                                        <i class="fa fa-ellipsis-h"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
