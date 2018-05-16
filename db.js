@@ -20,7 +20,8 @@ exports.User = mongoose.model('users',{
     email:String,
     phone:String,
     ip:String,
-    time:Date
+    time:Date,
+    description:String
 });
 
 exports.Questions = mongoose.model('questions',{

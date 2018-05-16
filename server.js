@@ -20,6 +20,7 @@ app.use(require('./routes/user/signin'));
 app.use(require('./routes/user/register'));
 app.use(require('./routes/user/personal'));
 app.use(require('./routes/user/settings'));
+app.use(require('./routes/user/photo'));
 
 app.listen(4000,()=>{
     console.log('4000===');

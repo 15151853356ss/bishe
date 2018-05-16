@@ -16,6 +16,9 @@ body {
     vertical-align: middle;
     box-sizing: border-box;
   }
+  a:hover{
+    text-decoration: none;
+  }
   .sign .logo {
     position: absolute;
     left: 50px;

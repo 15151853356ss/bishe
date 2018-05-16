@@ -21,23 +21,114 @@
         <div class="personal">
             <div class="header">
                 <div class="left">
-                    <div>
-                        <img src="/uploads/{{petname}}.jpg" alt="">
+                    <div class="avatar">
+                        <img src="/uploads/{{user}}.jpg" alt="">
                     </div>
-                    <div>
+                    <div class="name">
                         <p>{{user}}</p>
                         <p>暂无个人资料</p>
                     </div>
                 </div>
                 <div class="right">
-                    <a href="/user/photo">完善个人资料</a>
+                    <a href="/user/photo">{{complete}}</a>
                 </div>
             </div>
             <div class="down">
                 <nav class="wode">
-                    <li>问题</li>
-                    <li>回答</li>
+                    <li><a href="#" onclick="hiddenFun()">问题 （0）</a></li>
+                    <li><a href="#" onclick="showFun()">回答 （0）</a></li>
                 </nav>
+                <div class="list-container">
+                    <h4>我的问题</h4>
+                    {{each questions as q}}
+                    <div class="note-list Card media" onclick="location.href='/detail/{{q.id}}'">
+                        <div class="feedSource">
+                            <div class="topic">
+                                <p>
+                                    <span>来自话题：</span>
+                                    <a href="/topic/{{q.topic}}">{{q.topic}}</a>
+                                </p>
+                            </div>
+                            <div class="media-left">
+                                <a href="/personal/{{q.petname}}" class="avatar">
+                                    <img class="media-object" src="/uploads/{{q.petname}}.jpg" alt="">
+                                </a>
+                                <a href="/personal/{{q.petname}}" class="name">
+                                    <h5 class="media-heading">{{q.petname}}</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="contentItem">
+                                <h2>{{q.content}}</h2>
+                            </div>
+                            <div class="comment-description">
+                                <div class="description">
+                                    {{q.description}}
+                                </div>
+                                <div class="comment-count">
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                        喜欢
+                                    </a>
+                                    <a href="#" onclick="location.href='/detail/{{q.id}}'">
+                                        <i class="fa fa-commenting-o"></i>
+                                        33条评论
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-star"></i>
+                                        收藏
+                                    </a>
+                                    <a href="#" class="chajian">
+                                        <i class="fa fa-ellipsis-h"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="answer-list">
+                    <h4>我的回答</h4>
+                    {{each answers as answer}}
+                    <div class="note-list Card media">
+                        <div class="feedSource">
+                            <div class="media-left">
+                                <a href="/personal/{{answer.petname}}" class="avatar">
+                                    <img class="media-object" src="/uploads/{{answer.petname}}.jpg" alt="">
+                                </a>
+                                <a href="/personal/{{answer.petname}}" class="name">
+                                    <h5 class="media-heading">{{answer.petname}}</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="comment-description">
+                                <div class="description">
+                                    {{answer.content}}
+                                </div>
+                                <div class="comment-count">
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                        喜欢
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-commenting-o"></i>
+                                        33条评论
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-star"></i>
+                                        收藏
+                                    </a>
+                                    <a href="#" class="chajian">
+                                        <i class="fa fa-ellipsis-h"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
         </div>
     </div>

@@ -37,6 +37,7 @@
 }
 .note .post .article .avatar img{
     width: 100%;
+    height: 100%;
 }
 .note .post .article .info{
     display: inline-block;

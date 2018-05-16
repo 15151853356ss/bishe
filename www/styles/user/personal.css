@@ -15,12 +15,89 @@
 .left>div:nth-of-type(2){
     padding: 2rem;
 }
+.left .name p{
+    margin-bottom: 3rem;
+}
 .right{
     padding: 2rem;
+}
+.right a{
+    text-decoration: none;
+    display: block;
+    color: #0084ff;
+    padding: 1rem;
+    border: 1px solid #0084ff;
+    border-radius: 3px;
+}
+a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
 }
 .wode{
     display: flex;
 }
-.wode>li:nth-of-type(2){
-    margin-left: 3rem;
+.wode>li{
+    padding: 0 20px; 
+    list-style: none;
+}
+.wode li a{
+    padding: 14px 0;
+}
+.note-list{
+    padding: 16px 20px;
+}
+h4{
+    padding: 16px 20px;
+    font-weight: 600;
+}
+.feedSource{
+    margin-bottom: 8px;
+}
+.feedSource .topic p{
+    margin-bottom: 4px;
+}
+.feedSource .topic p a{
+    color: #8590a6;
+}
+.media-left {
+    width: 100%;
+    margin-bottom: 14px;
+    display: block;
+}
+.media-left a{
+    display: inline-block;
+    vertical-align: middle;
+}
+.media-left .avatar img{
+    width: 24px;
+    height: 24px;
+}
+.media-left .name{
+    font-size: 15px;
+    font-weight: 600;
+}
+.content .contentItem h2{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #1a1a1a;
+    margin-top: -4px;
+    margin-bottom: -4px;
+}
+.content .contentItem h2:hover{
+    color: rgb(23, 81, 153);
+    cursor: pointer;
+}
+.comment-description .description{
+    margin:9px 0; 
+}
+
+.comment-count a{
+    margin-right: 24px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #8590a6;
+}
+.answer-list{
+    display: none;
 }

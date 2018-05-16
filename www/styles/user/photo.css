@@ -1,0 +1,24 @@
+.index {
+    margin-top: 58px;
+}
+.person{
+    padding: 3rem;
+    display: flex;
+    justify-content: left;
+}
+.one{
+    width: 15%;
+}
+.two{
+    width: 80%;
+}
+.photo1{
+    width: 8rem;
+    height: 8rem;
+    background-image: url('/images/user.png');
+    background-size: 100% 100%;
+}
+.btn{
+    background-color: #0084ff;
+    color: white;
+}
